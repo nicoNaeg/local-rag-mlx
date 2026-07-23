@@ -1,4 +1,4 @@
-.PHONY: setup qdrant qdrant-down corpus ingest search lint fmt test
+.PHONY: setup qdrant qdrant-down corpus ingest search eval-retrieval lint fmt test
 
 setup:
 	cd backend && uv sync
@@ -17,6 +17,9 @@ ingest:
 
 search:
 	cd backend && uv run python -m local_rag.search "$(q)"
+
+eval-retrieval:
+	cd backend && uv run python -m local_rag.eval_retrieval
 
 lint:
 	cd backend && uv run ruff check . && uv run ruff format --check .

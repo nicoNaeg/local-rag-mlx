@@ -1,0 +1,24 @@
+{"question": "Combien de jours de congés payés par an ?", "doc": "manuel_rh", "sections": ["Conges payes"]}
+{"question": "Quelle est l'indemnité de télétravail ?", "doc": "manuel_rh", "sections": ["Teletravail"]}
+{"question": "Quel est le budget formation annuel par collaborateur ?", "doc": "manuel_rh", "sections": ["Formation"]}
+{"question": "Pendant combien de temps le salaire est-il maintenu en cas d'arrêt maladie ?", "doc": "manuel_rh", "sections": ["Absences et maladie"]}
+{"question": "Quelle est la longueur minimale d'un mot de passe ?", "doc": "politique_securite", "sections": ["Mots de passe"]}
+{"question": "Quels facteurs d'authentification multifacteur sont autorisés ?", "doc": "politique_securite", "sections": ["Authentification multifacteur"]}
+{"question": "Que faire si mon ordinateur est compromis ?", "doc": "politique_securite", "sections": ["Gestion des incidents"]}
+{"question": "Quelle règle de sauvegarde l'entreprise applique-t-elle ?", "doc": "politique_securite", "sections": ["Sauvegardes"]}
+{"question": "Quel matériel informatique puis-je choisir en arrivant ?", "doc": "guide_onboarding", "sections": ["Avant votre arrivee"]}
+{"question": "Combien de temps dure la période d'essai des cadres ?", "doc": "guide_onboarding", "sections": ["Periode d'essai"]}
+{"question": "Comment fonctionne le parrainage des nouveaux arrivants ?", "doc": "guide_onboarding", "sections": ["Parrainage"]}
+{"question": "Qui contacter pour un problème informatique ?", "doc": "guide_onboarding", "sections": ["Contacts utiles", "Comptes et outils"]}
+{"question": "Quel est le plafond de remboursement d'un repas avec un client ?", "doc": "notes_de_frais", "sections": ["Plafonds de remboursement"]}
+{"question": "Sous quel délai dois-je soumettre une note de frais ?", "doc": "notes_de_frais", "sections": ["Delais"]}
+{"question": "Quelle est l'indemnité kilométrique pour un véhicule personnel ?", "doc": "notes_de_frais", "sections": ["Vehicule personnel"]}
+{"question": "Dans quels cas puis-je demander une avance sur frais ?", "doc": "notes_de_frais", "sections": ["Avances sur frais"]}
+{"question": "Quel est le SLA de disponibilité de la plateforme Helios ?", "doc": "spec_helios", "sections": ["Disponibilite"]}
+{"question": "À partir de quelle température d'onduleur une alerte critique est-elle déclenchée ?", "doc": "spec_helios", "sections": ["Seuils d'alerte"]}
+{"question": "Quel est le quota de requêtes de l'API Helios ?", "doc": "spec_helios", "sections": ["API"]}
+{"question": "Combien de temps une passerelle Edge peut-elle fonctionner sans connexion ?", "doc": "spec_helios", "sections": ["Architecture"]}
+{"question": "Où sont hébergées les données de la plateforme Helios ?", "doc": "spec_helios", "sections": ["Securite"]}
+{"question": "Quels sont les seuils de validation pour un achat ?", "doc": "procedure_achats", "sections": ["Seuils de validation"]}
+{"question": "Quels documents faut-il pour référencer un nouveau fournisseur ?", "doc": "procedure_achats", "sections": ["Fournisseurs"]}
+{"question": "Quel est le délai de paiement des factures fournisseurs ?", "doc": "procedure_achats", "sections": ["Reception et paiement"]}
