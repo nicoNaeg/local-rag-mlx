@@ -1,31 +1,26 @@
 import argparse
 
 from local_rag.config import Settings
-from local_rag.embedding import Embedder
-from local_rag.vectorstore import VectorStore
+from local_rag.retrieval import Retriever
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Hybrid search over the indexed corpus")
+    parser = argparse.ArgumentParser(description="Hybrid search with cross-encoder reranking")
     parser.add_argument("query")
     parser.add_argument("--limit", type=int, default=5)
+    parser.add_argument("--no-rerank", action="store_true")
     args = parser.parse_args()
 
-    settings = Settings()
-    embedder = Embedder(settings.embedding_model, settings.device, settings.embed_batch_size)
-    dense, sparse = embedder.encode([args.query])
-    store = VectorStore(settings.qdrant_url, settings.collection)
-    points = store.hybrid_search(dense[0], sparse[0], limit=args.limit)
+    retriever = Retriever(Settings())
+    chunks = retriever.search(args.query, limit=args.limit, rerank=not args.no_rerank)
 
-    if not points:
+    if not chunks:
         print("No result.")
         return
-    for rank, point in enumerate(points, start=1):
-        payload = point.payload or {}
-        pages = ",".join(str(page) for page in payload.get("pages", []))
-        header = f"{payload.get('doc')}  p.{pages}  [{payload.get('section')}]"
-        print(f"{rank}. score={point.score:.4f}  {header}")
-        snippet = " ".join(str(payload.get("text", "")).split())
+    for rank, chunk in enumerate(chunks, start=1):
+        pages = ",".join(str(page) for page in chunk.pages)
+        print(f"{rank}. score={chunk.score:.4f}  {chunk.doc}  p.{pages}  [{chunk.section}]")
+        snippet = " ".join(chunk.text.split())
         print(f"   {snippet[:280]}")
 
 
