@@ -1,4 +1,4 @@
-.PHONY: setup qdrant qdrant-down lint fmt test
+.PHONY: setup qdrant qdrant-down corpus ingest search lint fmt test
 
 setup:
 	cd backend && uv sync
@@ -8,6 +8,15 @@ qdrant:
 
 qdrant-down:
 	docker compose down
+
+corpus:
+	cd backend && uv run python -m local_rag.corpus
+
+ingest:
+	cd backend && uv run python -m local_rag.ingest
+
+search:
+	cd backend && uv run python -m local_rag.search "$(q)"
 
 lint:
 	cd backend && uv run ruff check . && uv run ruff format --check .
