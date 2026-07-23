@@ -1,15 +1,31 @@
 # local-rag-mlx
 
-> Fully local RAG engine with LoRA fine-tuning on Apple Silicon (MLX) — hybrid retrieval, cross-encoder reranking, token streaming. No cloud APIs at runtime.
+> Fully local RAG engine with LoRA fine-tuning, built for Apple Silicon. Hybrid retrieval, cross-encoder reranking, token streaming. No cloud APIs at runtime.
 
-**Status: 🚧 design phase** — architecture decisions are being discussed and recorded before code lands.
+**Status: early development.** Architecture is settled and recorded; the pipeline is being built milestone by milestone.
 
-## Planned architecture
+## Architecture
 
-- **Ingestion**: PDF → structured text → chunking with page/section metadata
-- **Retrieval**: hybrid search (dense + sparse) in a local vector store, then cross-encoder reranking
-- **Generation**: 7–9B instruct model served in-process with [MLX](https://github.com/ml-explore/mlx), fine-tuned with LoRA for grounded, citation-first answers
-- **API/UI**: FastAPI streaming tokens over SSE to a web frontend, with clickable source cards
-- **Evaluation**: automated harness measuring retrieval quality and generation faithfulness — the fine-tuning gain will be documented with reproducible before/after numbers
+- **Ingestion**: PDF to structured text (Docling), structure-aware chunking with page and section metadata
+- **Retrieval**: hybrid search (BGE-M3 dense + learned sparse) in Qdrant with server-side RRF fusion, then cross-encoder reranking (bge-reranker-v2-m3)
+- **Generation**: Qwen3-8B (4-bit) served in-process with [MLX](https://github.com/ml-explore/mlx), fine-tuned with LoRA for grounded, citation-first answers
+- **API and UI**: FastAPI streaming tokens over SSE to a Next.js frontend, with clickable source cards
+- **Evaluation**: automated harness measuring retrieval quality and generation faithfulness; the fine-tuning gain is documented with reproducible before/after numbers
 
-Target hardware: Apple M4 Pro, 24 GB unified memory. Everything — embedding, retrieval, reranking, fine-tuning, inference — runs on-device.
+Target hardware: Apple M4 Pro, 24 GB unified memory. Everything (embedding, retrieval, reranking, fine-tuning, inference) runs on-device. The generation layer sits behind a backend interface so the same API can target vLLM for datacenter deployment.
+
+## Repository layout
+
+    backend/             FastAPI service and RAG pipeline (Python, uv)
+    frontend/            Next.js UI (arrives with milestone 3)
+    docker-compose.yml   Local Qdrant
+    data/                Corpus and working data (gitignored)
+
+## Getting started
+
+Requires [uv](https://docs.astral.sh/uv/), Docker, and Node 20+ (frontend, later).
+
+    make setup       install backend dependencies
+    make qdrant      start Qdrant in Docker
+    make lint        ruff check + format check
+    make test        run the test suite
