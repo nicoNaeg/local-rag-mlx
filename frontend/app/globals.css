@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #f6f7f4;
+  --color-surface: #ffffff;
+  --color-line: #dde2da;
+  --color-ink: #1d2721;
+  --color-ink-muted: #5d6a61;
+  --color-spruce: #1e5c45;
+  --color-spruce-deep: #164534;
+  --color-amber: #d98e2b;
+  --color-danger: #a33a2a;
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@keyframes card-flash {
+  from {
+    box-shadow: 0 0 0 2px var(--color-spruce);
+  }
+  to {
+    box-shadow: 0 0 0 2px transparent;
+  }
+}
+
+.card-flash {
+  animation: card-flash 1.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-flash {
+    animation: none;
+  }
+}
