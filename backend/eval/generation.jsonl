@@ -1,0 +1,72 @@
+{"id": "d01", "category": "direct", "question": "Combien de jours de congés payés par an ?", "expected_facts": ["25 jours"], "doc": "manuel_rh"}
+{"id": "d02", "category": "direct", "question": "Quelle est l'indemnité de télétravail ?", "expected_facts": ["2,60 EUR"], "doc": "manuel_rh"}
+{"id": "d03", "category": "direct", "question": "Quel est le budget formation annuel par collaborateur ?", "expected_facts": ["1 800 EUR"], "doc": "manuel_rh"}
+{"id": "d04", "category": "direct", "question": "Pendant combien de temps le salaire est-il maintenu en cas d'arrêt maladie ?", "expected_facts": ["90 jours"], "doc": "manuel_rh"}
+{"id": "d05", "category": "direct", "question": "Quelle est la longueur minimale d'un mot de passe ?", "expected_facts": ["16 caracteres"], "doc": "politique_securite"}
+{"id": "d06", "category": "direct", "question": "Quels facteurs d'authentification multifacteur sont autorisés ?", "expected_facts": ["TOTP", "FIDO2"], "doc": "politique_securite"}
+{"id": "d07", "category": "direct", "question": "Que faire si mon ordinateur est compromis ?", "expected_facts": ["eteindre", "deconnect"], "doc": "politique_securite"}
+{"id": "d08", "category": "direct", "question": "Quelle règle de sauvegarde l'entreprise applique-t-elle ?", "expected_facts": ["3-2-1"], "doc": "politique_securite"}
+{"id": "d09", "category": "direct", "question": "Quel matériel informatique puis-je choisir en arrivant ?", "expected_facts": ["MacBook Pro", "Dell XPS"], "doc": "guide_onboarding"}
+{"id": "d10", "category": "direct", "question": "Combien de temps dure la période d'essai des cadres ?", "expected_facts": ["4 mois"], "doc": "guide_onboarding"}
+{"id": "d11", "category": "direct", "question": "Comment fonctionne le parrainage des nouveaux arrivants ?", "expected_facts": ["hebdomadaire", "30 minutes"], "doc": "guide_onboarding"}
+{"id": "d12", "category": "direct", "question": "Qui contacter pour un problème informatique ?", "expected_facts": ["it-support@solencia.fr"], "doc": "guide_onboarding"}
+{"id": "d13", "category": "direct", "question": "Quel est le plafond de remboursement d'un repas avec un client ?", "expected_facts": ["38 EUR"], "doc": "notes_de_frais"}
+{"id": "d14", "category": "direct", "question": "Sous quel délai dois-je soumettre une note de frais ?", "expected_facts": ["30 jours"], "doc": "notes_de_frais"}
+{"id": "d15", "category": "direct", "question": "Quelle est l'indemnité kilométrique pour un véhicule personnel ?", "expected_facts": ["0,52 EUR"], "doc": "notes_de_frais"}
+{"id": "d16", "category": "direct", "question": "Dans quels cas puis-je demander une avance sur frais ?", "expected_facts": ["400 EUR", "10 jours"], "doc": "notes_de_frais"}
+{"id": "d17", "category": "direct", "question": "Quel est le SLA de disponibilité de la plateforme Helios ?", "expected_facts": ["99,5"], "doc": "spec_helios"}
+{"id": "d18", "category": "direct", "question": "À partir de quelle température d'onduleur une alerte critique est-elle déclenchée ?", "expected_facts": ["80"], "doc": "spec_helios"}
+{"id": "d19", "category": "direct", "question": "Quel est le quota de requêtes de l'API Helios ?", "expected_facts": ["600 requetes"], "doc": "spec_helios"}
+{"id": "d20", "category": "direct", "question": "Combien de temps une passerelle Edge peut-elle fonctionner sans connexion ?", "expected_facts": ["72 heures"], "doc": "spec_helios"}
+{"id": "d21", "category": "direct", "question": "Où sont hébergées les données de la plateforme Helios ?", "expected_facts": ["OVHcloud", "Gravelines"], "doc": "spec_helios"}
+{"id": "d22", "category": "direct", "question": "Quels sont les seuils de validation pour un achat ?", "expected_facts": ["500 EUR", "5 000 EUR"], "doc": "procedure_achats"}
+{"id": "d23", "category": "direct", "question": "Quels documents faut-il pour référencer un nouveau fournisseur ?", "expected_facts": ["KBIS", "URSSAF", "6 mois"], "doc": "procedure_achats"}
+{"id": "d24", "category": "direct", "question": "Quel est le délai de paiement des factures fournisseurs ?", "expected_facts": ["30 jours fin de mois"], "doc": "procedure_achats"}
+{"id": "p01", "category": "paraphrase", "question": "Je pars deux jours à Lyon voir un client, je peux mettre combien par nuit d'hôtel ?", "expected_facts": ["130 EUR"], "doc": "notes_de_frais"}
+{"id": "p02", "category": "paraphrase", "question": "On me propose de bosser de chez moi, c'est limité à combien de jours par semaine ?", "expected_facts": ["3 jours"], "doc": "manuel_rh"}
+{"id": "p03", "category": "paraphrase", "question": "Mon PV de stationnement pris pendant une mission client est-il remboursé ?", "expected_facts": ["amendes"], "doc": "notes_de_frais"}
+{"id": "p04", "category": "paraphrase", "question": "Qui paie quoi sur les titres-restaurant ?", "expected_facts": ["60%", "11,50"], "doc": "manuel_rh"}
+{"id": "p05", "category": "paraphrase", "question": "Je suis malade ce matin, qu'est-ce que je fais concrètement ?", "expected_facts": ["9h30", "48 heures"], "doc": "manuel_rh"}
+{"id": "p06", "category": "paraphrase", "question": "Au bout de combien de temps d'inactivité ma session se verrouille-t-elle toute seule ?", "expected_facts": ["5 minutes"], "doc": "politique_securite"}
+{"id": "p07", "category": "paraphrase", "question": "Sur quels services suis-je obligé d'activer la double authentification ?", "expected_facts": ["GitLab", "VPN", "Payfit"], "doc": "politique_securite"}
+{"id": "p08", "category": "paraphrase", "question": "Les consultants externes doivent-ils appliquer notre politique de sécurité ?", "expected_facts": ["prestataires"], "doc": "politique_securite"}
+{"id": "p09", "category": "paraphrase", "question": "À quelle heure et par qui suis-je accueilli pour mon tout premier jour ?", "expected_facts": ["9h15"], "doc": "guide_onboarding"}
+{"id": "p10", "category": "paraphrase", "question": "Qui m'aide à découvrir la boîte en dehors de ma propre équipe ?", "expected_facts": ["parrain", "hors"], "doc": "guide_onboarding"}
+{"id": "p11", "category": "paraphrase", "question": "J'ai combien de temps pour terminer le module de formation sécurité en ligne ?", "expected_facts": ["15 jours"], "doc": "guide_onboarding"}
+{"id": "p12", "category": "paraphrase", "question": "Quand mes objectifs de période d'essai sont-ils fixés avec mon manager ?", "expected_facts": ["J+30"], "doc": "guide_onboarding"}
+{"id": "p13", "category": "paraphrase", "question": "Qu'est-ce qu'il me faut avant de prendre ma voiture perso pour une mission ?", "expected_facts": ["autorisation", "assurance"], "doc": "notes_de_frais"}
+{"id": "p14", "category": "paraphrase", "question": "L'hôtel ne comprend pas le petit-déjeuner, je peux me faire rembourser combien ?", "expected_facts": ["12 EUR"], "doc": "notes_de_frais"}
+{"id": "p15", "category": "paraphrase", "question": "À partir de quand ai-je le droit de prendre l'avion plutôt que le train ?", "expected_facts": ["5 heures"], "doc": "notes_de_frais"}
+{"id": "p16", "category": "paraphrase", "question": "En tant que commercial, combien puis-je dépenser par mois avec la carte de l'entreprise ?", "expected_facts": ["2 500 EUR"], "doc": "notes_de_frais"}
+{"id": "p17", "category": "paraphrase", "question": "Un site ne remonte plus de données, au bout de combien de temps l'alerte part-elle ?", "expected_facts": ["30 minutes"], "doc": "spec_helios"}
+{"id": "p18", "category": "paraphrase", "question": "Pendant combien de temps les mesures brutes des capteurs sont-elles conservées ?", "expected_facts": ["13 mois"], "doc": "spec_helios"}
+{"id": "p19", "category": "paraphrase", "question": "Pourquoi la plateforme serait-elle indisponible un mardi soir ?", "expected_facts": ["22h"], "doc": "spec_helios"}
+{"id": "p20", "category": "paraphrase", "question": "Comment mon script s'authentifie-t-il auprès de l'API Helios ?", "expected_facts": ["OAuth2"], "doc": "spec_helios"}
+{"id": "p21", "category": "paraphrase", "question": "Pour un achat de 12 000 euros HT, qui valide et avec quelles conditions ?", "expected_facts": ["DAF", "3 devis"], "doc": "procedure_achats"}
+{"id": "p22", "category": "paraphrase", "question": "On a besoin d'un prestataire en urgence opérationnelle, ça peut aller vite comment ?", "expected_facts": ["24 heures"], "doc": "procedure_achats"}
+{"id": "p23", "category": "paraphrase", "question": "La facture du fournisseur ne correspond pas au devis, je fais quoi et sous quel délai ?", "expected_facts": ["5 jours"], "doc": "procedure_achats"}
+{"id": "p24", "category": "paraphrase", "question": "On est combien chez Solencia et où sont les bureaux ?", "expected_facts": ["214", "Nantes"], "doc": "manuel_rh"}
+{"id": "u01", "category": "unanswerable", "question": "Quel est le montant de la prime de cooptation ?", "expected_facts": []}
+{"id": "u02", "category": "unanswerable", "question": "Combien de places de parking le siège de Nantes offre-t-il ?", "expected_facts": []}
+{"id": "u03", "category": "unanswerable", "question": "Quelle est la politique de congé parental de Solencia ?", "expected_facts": []}
+{"id": "u04", "category": "unanswerable", "question": "Quel est le salaire d'entrée d'un ingénieur support chez Solencia ?", "expected_facts": []}
+{"id": "u05", "category": "unanswerable", "question": "Ai-je le droit de télétravailler depuis l'étranger ?", "expected_facts": []}
+{"id": "u06", "category": "unanswerable", "question": "Quelle est la marque des écrans externes fournis avec les postes de travail ?", "expected_facts": []}
+{"id": "u07", "category": "unanswerable", "question": "Combien coûte une licence Helios pour un site de 10 MW ?", "expected_facts": []}
+{"id": "u08", "category": "unanswerable", "question": "Pendant combien de temps les e-mails supprimés sont-ils conservés ?", "expected_facts": []}
+{"id": "u09", "category": "unanswerable", "question": "Qui est le délégué à la protection des données (DPO) de Solencia ?", "expected_facts": []}
+{"id": "u10", "category": "unanswerable", "question": "Quel taux d'intéressement a été versé l'an dernier ?", "expected_facts": []}
+{"id": "u11", "category": "unanswerable", "question": "Combien de jours de congés sont accordés pour un mariage ?", "expected_facts": []}
+{"id": "u12", "category": "unanswerable", "question": "Quelle version minimale d'Android faut-il pour l'application mobile Helios ?", "expected_facts": []}
+{"id": "u13", "category": "unanswerable", "question": "Quel est le plafond de remboursement d'un taxi en déplacement ?", "expected_facts": []}
+{"id": "u14", "category": "unanswerable", "question": "Comment obtenir une place en crèche d'entreprise ?", "expected_facts": []}
+{"id": "u15", "category": "unanswerable", "question": "Quelle est la politique d'impression et de destruction des documents papier ?", "expected_facts": []}
+{"id": "u16", "category": "unanswerable", "question": "Combien d'onduleurs une passerelle Helios Edge peut-elle superviser au maximum ?", "expected_facts": []}
+{"id": "u17", "category": "unanswerable", "question": "Quel est le préavis pour résilier un abonnement Helios ?", "expected_facts": []}
+{"id": "u18", "category": "unanswerable", "question": "Y a-t-il une salle de sport au siège de Nantes ?", "expected_facts": []}
+{"id": "u19", "category": "unanswerable", "question": "Quelle est la politique de Solencia sur les cadeaux offerts aux clients ?", "expected_facts": []}
+{"id": "u20", "category": "unanswerable", "question": "Quel est le montant de la prime d'ancienneté après 5 ans ?", "expected_facts": []}
+{"id": "u21", "category": "unanswerable", "question": "Sous quel délai le support Helios répond-il à un ticket client de sévérité 1 ?", "expected_facts": []}
+{"id": "u22", "category": "unanswerable", "question": "Quels sont les horaires d'ouverture de l'agence de Lyon ?", "expected_facts": []}
+{"id": "u23", "category": "unanswerable", "question": "Quel prestataire héberge la copie de sauvegarde hors site ?", "expected_facts": []}
+{"id": "u24", "category": "unanswerable", "question": "Quel est le chiffre d'affaires annuel de Solencia ?", "expected_facts": []}
