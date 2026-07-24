@@ -1,4 +1,4 @@
-.PHONY: setup qdrant qdrant-down corpus ingest search eval-retrieval api front front-install lint fmt test
+.PHONY: setup qdrant qdrant-down corpus ingest search eval-retrieval eval-generation api front front-install lint fmt test
 
 setup:
 	cd backend && uv sync
@@ -29,6 +29,9 @@ search:
 
 eval-retrieval:
 	cd backend && uv run python -m local_rag.eval_retrieval
+
+eval-generation:
+	cd backend && uv run --group eval python -m local_rag.eval_generation
 
 lint:
 	cd backend && uv run ruff check . && uv run ruff format --check .

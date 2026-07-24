@@ -12,13 +12,16 @@ SYSTEM_PROMPT = (
 EMPTY_CONTEXT = "No excerpt matched the question."
 
 
-def build_messages(question: str, chunks: list[RetrievedChunk]) -> list[Message]:
+def format_excerpts(chunks: list[RetrievedChunk]) -> str:
     blocks = []
     for number, chunk in enumerate(chunks, start=1):
         pages = ", ".join(str(page) for page in chunk.pages)
         blocks.append(f"[{number}] {chunk.doc}, {chunk.section} (p. {pages})\n{chunk.text}")
-    context = "\n\n".join(blocks) if blocks else EMPTY_CONTEXT
-    user = f"Excerpts:\n\n{context}\n\nQuestion: {question}"
+    return "\n\n".join(blocks) if blocks else EMPTY_CONTEXT
+
+
+def build_messages(question: str, chunks: list[RetrievedChunk]) -> list[Message]:
+    user = f"Excerpts:\n\n{format_excerpts(chunks)}\n\nQuestion: {question}"
     return [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": user},

@@ -25,3 +25,4 @@ class Settings(BaseSettings):
     top_p: float = 0.8
     thinking: bool = False
     queue_size: int = 8
+    judge_model: str = "claude-opus-4-8"
