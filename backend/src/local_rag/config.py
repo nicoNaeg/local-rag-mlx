@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Literal
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -16,3 +17,11 @@ class Settings(BaseSettings):
     top_k: int = 5
     corpus_dir: Path = Path("../data/corpus")
     eval_dir: Path = Path("eval")
+    generation_backend: Literal["mlx", "openai"] = "mlx"
+    generation_model: str = "mlx-community/Qwen3-8B-4bit"
+    openai_base_url: str = "http://localhost:8001/v1"
+    max_tokens: int = 1024
+    temperature: float = 0.7
+    top_p: float = 0.8
+    thinking: bool = False
+    queue_size: int = 8

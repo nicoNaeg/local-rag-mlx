@@ -10,6 +10,13 @@ class VectorStore:
         self._client = QdrantClient(url=url)
         self._collection = collection
 
+    def ping(self) -> bool:
+        try:
+            self._client.get_collections()
+        except Exception:
+            return False
+        return True
+
     def recreate(self, dense_dim: int) -> None:
         if self._client.collection_exists(self._collection):
             self._client.delete_collection(self._collection)

@@ -1,7 +1,10 @@
-.PHONY: setup qdrant qdrant-down corpus ingest search eval-retrieval lint fmt test
+.PHONY: setup qdrant qdrant-down corpus ingest search eval-retrieval api lint fmt test
 
 setup:
 	cd backend && uv sync
+
+api:
+	cd backend && uv run uvicorn --factory local_rag.api:create_app --port 8000
 
 qdrant:
 	docker compose up -d qdrant

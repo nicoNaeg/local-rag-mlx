@@ -24,6 +24,9 @@ class Retriever:
         self._store = VectorStore(settings.qdrant_url, settings.collection)
         self._reranker: Reranker | None = None
 
+    def ping(self) -> bool:
+        return self._store.ping()
+
     def search(
         self, query: str, limit: int | None = None, rerank: bool = True
     ) -> list[RetrievedChunk]:
