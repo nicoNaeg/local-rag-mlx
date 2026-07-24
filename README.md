@@ -2,7 +2,7 @@
 
 > Fully local RAG engine with LoRA fine-tuning, built for Apple Silicon. Hybrid retrieval, cross-encoder reranking, token streaming. No cloud APIs at runtime.
 
-**Status: early development.** Architecture is settled and recorded; the pipeline is being built milestone by milestone.
+**Status: serving works end to end.** Ingestion, hybrid retrieval with reranking, and the streaming API with its frontend are in place; next come the generation evaluation harness and LoRA fine-tuning.
 
 ## Architecture
 
@@ -17,7 +17,7 @@ Target hardware: Apple M4 Pro, 24 GB unified memory. Everything (embedding, retr
 ## Repository layout
 
     backend/             FastAPI service and RAG pipeline (Python, uv)
-    frontend/            Next.js UI (arrives with milestone 3)
+    frontend/            Next.js UI, one page streaming answers with cited sources
     docker-compose.yml   Local Qdrant
     data/                Corpus and working data (gitignored)
 
@@ -38,9 +38,19 @@ Retrieval is measured on a labeled set of 24 questions over the demo corpus (`ba
 
 Hybrid search alone already places a relevant chunk in the top 3 for every question; the reranker fixes the remaining rank-1 misses, which matters because only the top 3 to 5 chunks enter the prompt. These numbers are a ceiling: the corpus is clean and the questions direct. The generation evaluation (milestone 4) adds paraphrased and unanswerable questions that stress the pipeline harder.
 
+## Serving
+
+`make api` starts FastAPI on port 8000. `make front` starts the Next.js UI on http://localhost:3000 and proxies API calls to the backend, so the demo lives entirely at that address.
+
+The generation endpoint is `POST /api/query` with `{"question": "..."}`, answered as a single SSE stream: a `sources` event as soon as hybrid search and reranking finish (the UI renders source cards while the model runs), one `token` event per decoded token, then `done` carrying latency metrics (retrieval, first token, tokens per second). Generation failures arrive as an `error` event rather than a broken stream. `GET /healthz` reports Qdrant reachability and the loaded backend.
+
+A single Metal GPU runs one generation at a time, so requests pass through a bounded async queue consumed by one worker; when the queue is full the API answers 503 with Retry-After instead of stacking latency, and a client disconnect cancels the in-flight generation.
+
+Generation runs in-process with MLX (Qwen3-8B, 4-bit) behind a small backend protocol. Setting `RAG_GENERATION_BACKEND=openai` points the same API at any OpenAI-compatible server (vLLM, TGI) via `RAG_OPENAI_BASE_URL`: the local demo and a datacenter deployment share the serving layer. Qwen3's thinking mode is off by default to keep first-token latency low; set `RAG_THINKING=true` to compare.
+
 ## Getting started
 
-Requires [uv](https://docs.astral.sh/uv/), Docker, and Node 20+ (frontend, later).
+Requires [uv](https://docs.astral.sh/uv/), Docker, and Node 20+.
 
     make setup       install backend dependencies
     make qdrant      start Qdrant in Docker
@@ -48,5 +58,8 @@ Requires [uv](https://docs.astral.sh/uv/), Docker, and Node 20+ (frontend, later
     make ingest      extract, chunk, embed and index the corpus
     make search q="votre question"   hybrid search + rerank over the index
     make eval-retrieval   measure retrieval quality on the labeled set
+    make api         start the API server (loads the models, port 8000)
+    make front-install   install frontend dependencies
+    make front       start the frontend on http://localhost:3000
     make lint        ruff check + format check
     make test        run the test suite
