@@ -50,9 +50,11 @@ Baseline of the base model (Qwen3-8B 4-bit, before fine-tuning):
 |--------|--------|------------|--------------|
 | expected facts present | 0.958 | 0.917 | |
 | citation validity | 1.000 | 1.000 | |
+| citation support (judge) | 0.958 | 0.958 | |
+| refusal rate (judge) | 0.000 | 0.000 | 0.917 |
 | median answer tokens | 30 | 33 | 27 |
 
-The judged metrics (refusal rate on the unanswerable set, per-claim citation support) complete this table once the judge pass runs; they are the primary targets of the milestone 5 before and after comparison. The three failures on answerable questions are instructive: one answer inverts a security instruction (keep the compromised machine connected, where the policy says the opposite), one invents a reimbursement rule by conflating two adjacent policies, one returns half of a two-part fact. All three carry well-formed citations, which is why citation validity alone is not a faithfulness metric and the fine-tuning targets grounding rather than formatting.
+The base model never over-refuses on answerable questions and already refuses 22 of the 24 unanswerable ones. The remaining failures are the interesting part. One answer inverts a security instruction (keep the compromised machine connected, where the policy says the opposite) and one invents a reimbursement rule by conflating two adjacent policies; both carry well-formed citations that the judge flags as unsupported. One unanswerable question gets a confident hallucination: asked who hosts the off-site backup copy, the model names the provider that hosts the production data, citation included. And one paraphrase answer is judged supported yet fails the fact check because it returns half of a two-part fact: support and completeness are measured separately on purpose. These margins (support 0.958, refusal 0.917, inconsistent refusal wording) are the targets of the milestone 5 fine-tuning.
 
 ## Serving
 

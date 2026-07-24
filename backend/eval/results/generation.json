@@ -4,42 +4,42 @@
     "generation_model": "mlx-community/Qwen3-8B-4bit",
     "decoding": "greedy",
     "top_k": 5,
-    "judge_model": null,
-    "judge_prompt_version": null
+    "judge_model": "claude-opus-4-8",
+    "judge_prompt_version": "1"
   },
   "categories": {
     "direct": {
       "n": 24,
-      "judged": 0,
+      "judged": 24,
       "facts_rate": 0.958,
       "citation_valid_rate": 1.0,
-      "refusal_rate": null,
-      "supported_rate": null,
+      "refusal_rate": 0.0,
+      "supported_rate": 0.958,
       "median_tokens": 30.0,
-      "median_first_token_ms": 1642.5,
-      "mean_tokens_per_second": 53.4
+      "median_first_token_ms": 1745.5,
+      "mean_tokens_per_second": 53.0
     },
     "paraphrase": {
       "n": 24,
-      "judged": 0,
+      "judged": 24,
       "facts_rate": 0.917,
       "citation_valid_rate": 1.0,
-      "refusal_rate": null,
-      "supported_rate": null,
+      "refusal_rate": 0.0,
+      "supported_rate": 0.958,
       "median_tokens": 32.5,
-      "median_first_token_ms": 1848.5,
-      "mean_tokens_per_second": 51.7
+      "median_first_token_ms": 1833.5,
+      "mean_tokens_per_second": 53.5
     },
     "unanswerable": {
       "n": 24,
-      "judged": 0,
+      "judged": 24,
       "facts_rate": null,
       "citation_valid_rate": null,
-      "refusal_rate": null,
-      "supported_rate": null,
+      "refusal_rate": 0.917,
+      "supported_rate": 0.0,
       "median_tokens": 27.0,
-      "median_first_token_ms": 1761.0,
-      "mean_tokens_per_second": 52.4
+      "median_first_token_ms": 1798.0,
+      "mean_tokens_per_second": 53.5
     }
   },
   "answers": [
@@ -53,13 +53,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 2648,
-      "total_ms": 3098,
+      "first_token_ms": 2526,
+      "total_ms": 2976,
       "tokens": 24,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.4
     },
     {
       "id": "d02",
@@ -71,13 +71,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 2033,
-      "total_ms": 2713,
+      "first_token_ms": 2096,
+      "total_ms": 2769,
       "tokens": 36,
-      "tokens_per_second": 52.9
+      "tokens_per_second": 53.5
     },
     {
       "id": "d03",
@@ -89,13 +89,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 2031,
-      "total_ms": 2485,
+      "first_token_ms": 2094,
+      "total_ms": 2540,
       "tokens": 24,
-      "tokens_per_second": 52.9
+      "tokens_per_second": 53.8
     },
     {
       "id": "d04",
@@ -107,13 +107,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1777,
-      "total_ms": 2629,
+      "first_token_ms": 1835,
+      "total_ms": 2683,
       "tokens": 45,
-      "tokens_per_second": 52.8
+      "tokens_per_second": 53.1
     },
     {
       "id": "d05",
@@ -125,13 +125,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1863,
-      "total_ms": 2257,
+      "first_token_ms": 1922,
+      "total_ms": 2313,
       "tokens": 21,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.7
     },
     {
       "id": "d06",
@@ -143,13 +143,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1779,
-      "total_ms": 2345,
+      "first_token_ms": 1757,
+      "total_ms": 2316,
       "tokens": 30,
-      "tokens_per_second": 53.0
+      "tokens_per_second": 53.6
     },
     {
       "id": "d07",
@@ -161,13 +161,15 @@
       ],
       "facts_correct": false,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
-      "unsupported_claims": [],
-      "first_token_ms": 1947,
-      "total_ms": 2980,
+      "refusal": false,
+      "supported": false,
+      "unsupported_claims": [
+        "ne le déconnectez pas du réseau et ne le mettez pas hors ligne (contredit l'excerpt [1] qui indique de déconnecter la machine du réseau sans l'éteindre)"
+      ],
+      "first_token_ms": 1995,
+      "total_ms": 3026,
       "tokens": 55,
-      "tokens_per_second": 53.2
+      "tokens_per_second": 53.4
     },
     {
       "id": "d08",
@@ -179,13 +181,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1679,
-      "total_ms": 2426,
+      "first_token_ms": 1793,
+      "total_ms": 2572,
       "tokens": 40,
-      "tokens_per_second": 53.6
+      "tokens_per_second": 51.4
     },
     {
       "id": "d09",
@@ -197,13 +199,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1773,
-      "total_ms": 2256,
+      "first_token_ms": 1853,
+      "total_ms": 2342,
       "tokens": 26,
-      "tokens_per_second": 53.9
+      "tokens_per_second": 53.1
     },
     {
       "id": "d10",
@@ -215,13 +217,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1775,
-      "total_ms": 2109,
+      "first_token_ms": 1857,
+      "total_ms": 2200,
       "tokens": 18,
-      "tokens_per_second": 53.9
+      "tokens_per_second": 52.5
     },
     {
       "id": "d11",
@@ -233,13 +235,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1523,
-      "total_ms": 3003,
+      "first_token_ms": 1620,
+      "total_ms": 3160,
       "tokens": 79,
-      "tokens_per_second": 53.4
+      "tokens_per_second": 51.3
     },
     {
       "id": "d12",
@@ -251,13 +253,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1763,
-      "total_ms": 2134,
+      "first_token_ms": 1862,
+      "total_ms": 2239,
       "tokens": 20,
-      "tokens_per_second": 53.8
+      "tokens_per_second": 53.0
     },
     {
       "id": "d13",
@@ -269,13 +271,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1606,
-      "total_ms": 2127,
+      "first_token_ms": 1734,
+      "total_ms": 2269,
       "tokens": 28,
-      "tokens_per_second": 53.7
+      "tokens_per_second": 52.4
     },
     {
       "id": "d14",
@@ -287,13 +289,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1435,
-      "total_ms": 1883,
+      "first_token_ms": 1517,
+      "total_ms": 1983,
       "tokens": 24,
-      "tokens_per_second": 53.6
+      "tokens_per_second": 51.5
     },
     {
       "id": "d15",
@@ -305,13 +307,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1437,
-      "total_ms": 1997,
+      "first_token_ms": 1504,
+      "total_ms": 2078,
       "tokens": 30,
-      "tokens_per_second": 53.5
+      "tokens_per_second": 52.3
     },
     {
       "id": "d16",
@@ -323,13 +325,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1438,
-      "total_ms": 2151,
+      "first_token_ms": 1504,
+      "total_ms": 2216,
       "tokens": 38,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.4
     },
     {
       "id": "d17",
@@ -341,13 +343,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1517,
-      "total_ms": 2512,
+      "first_token_ms": 1585,
+      "total_ms": 2578,
       "tokens": 53,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.4
     },
     {
       "id": "d18",
@@ -359,11 +361,11 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1590,
-      "total_ms": 2188,
+      "first_token_ms": 1667,
+      "total_ms": 2265,
       "tokens": 32,
       "tokens_per_second": 53.5
     },
@@ -377,13 +379,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1583,
-      "total_ms": 2105,
+      "first_token_ms": 1588,
+      "total_ms": 2111,
       "tokens": 28,
-      "tokens_per_second": 53.6
+      "tokens_per_second": 53.5
     },
     {
       "id": "d20",
@@ -395,13 +397,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1692,
-      "total_ms": 2121,
+      "first_token_ms": 1765,
+      "total_ms": 2194,
       "tokens": 23,
-      "tokens_per_second": 53.6
+      "tokens_per_second": 53.7
     },
     {
       "id": "d21",
@@ -413,13 +415,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1596,
-      "total_ms": 2194,
+      "first_token_ms": 1659,
+      "total_ms": 2259,
       "tokens": 32,
-      "tokens_per_second": 53.5
+      "tokens_per_second": 53.4
     },
     {
       "id": "d22",
@@ -434,13 +436,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1511,
-      "total_ms": 3734,
+      "first_token_ms": 1590,
+      "total_ms": 3817,
       "tokens": 118,
-      "tokens_per_second": 53.1
+      "tokens_per_second": 53.0
     },
     {
       "id": "d23",
@@ -452,11 +454,11 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1602,
-      "total_ms": 2276,
+      "first_token_ms": 1664,
+      "total_ms": 2338,
       "tokens": 36,
       "tokens_per_second": 53.4
     },
@@ -470,13 +472,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1518,
-      "total_ms": 1963,
+      "first_token_ms": 1581,
+      "total_ms": 2027,
       "tokens": 24,
-      "tokens_per_second": 53.9
+      "tokens_per_second": 53.8
     },
     {
       "id": "p01",
@@ -488,13 +490,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1953,
-      "total_ms": 2781,
+      "first_token_ms": 2010,
+      "total_ms": 2840,
       "tokens": 44,
-      "tokens_per_second": 53.1
+      "tokens_per_second": 53.0
     },
     {
       "id": "p02",
@@ -506,13 +508,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 2046,
-      "total_ms": 2372,
+      "first_token_ms": 2097,
+      "total_ms": 2414,
       "tokens": 17,
-      "tokens_per_second": 52.2
+      "tokens_per_second": 53.6
     },
     {
       "id": "p03",
@@ -524,13 +526,16 @@
       ],
       "facts_correct": false,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
-      "unsupported_claims": [],
-      "first_token_ms": 1783,
-      "total_ms": 2925,
+      "refusal": false,
+      "supported": false,
+      "unsupported_claims": [
+        "Votre PV de stationnement pris pendant une mission client est remboursé, à condition qu'il soit accompagné d'un justificatif et qu'il soit inférieur à 5 EUR",
+        "Si le PV excède 5 EUR, il n'est pas remboursable [1]"
+      ],
+      "first_token_ms": 1832,
+      "total_ms": 2973,
       "tokens": 61,
-      "tokens_per_second": 53.4
+      "tokens_per_second": 53.5
     },
     {
       "id": "p04",
@@ -542,13 +547,13 @@
       ],
       "facts_correct": false,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1979,
-      "total_ms": 2545,
+      "first_token_ms": 2008,
+      "total_ms": 2567,
       "tokens": 30,
-      "tokens_per_second": 53.1
+      "tokens_per_second": 53.7
     },
     {
       "id": "p05",
@@ -560,13 +565,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 2040,
-      "total_ms": 2902,
+      "first_token_ms": 2093,
+      "total_ms": 2961,
       "tokens": 46,
-      "tokens_per_second": 53.4
+      "tokens_per_second": 53.0
     },
     {
       "id": "p06",
@@ -578,13 +583,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1621,
-      "total_ms": 1975,
+      "first_token_ms": 1675,
+      "total_ms": 2026,
       "tokens": 19,
-      "tokens_per_second": 53.7
+      "tokens_per_second": 54.1
     },
     {
       "id": "p07",
@@ -596,13 +601,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1784,
-      "total_ms": 2410,
+      "first_token_ms": 1835,
+      "total_ms": 2448,
       "tokens": 33,
-      "tokens_per_second": 52.8
+      "tokens_per_second": 53.8
     },
     {
       "id": "p08",
@@ -614,13 +619,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1948,
-      "total_ms": 3008,
+      "first_token_ms": 2003,
+      "total_ms": 3054,
       "tokens": 56,
-      "tokens_per_second": 52.8
+      "tokens_per_second": 53.3
     },
     {
       "id": "p09",
@@ -632,13 +637,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1622,
-      "total_ms": 2003,
+      "first_token_ms": 1669,
+      "total_ms": 2040,
       "tokens": 20,
-      "tokens_per_second": 52.5
+      "tokens_per_second": 54.0
     },
     {
       "id": "p10",
@@ -650,13 +655,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1975,
-      "total_ms": 2737,
+      "first_token_ms": 2005,
+      "total_ms": 2757,
       "tokens": 40,
-      "tokens_per_second": 52.5
+      "tokens_per_second": 53.2
     },
     {
       "id": "p11",
@@ -668,13 +673,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1987,
-      "total_ms": 2359,
+      "first_token_ms": 1925,
+      "total_ms": 2298,
       "tokens": 20,
-      "tokens_per_second": 53.7
+      "tokens_per_second": 53.6
     },
     {
       "id": "p12",
@@ -686,13 +691,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1693,
-      "total_ms": 2208,
+      "first_token_ms": 1671,
+      "total_ms": 2135,
       "tokens": 25,
-      "tokens_per_second": 48.6
+      "tokens_per_second": 53.8
     },
     {
       "id": "p13",
@@ -704,13 +709,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1858,
-      "total_ms": 2738,
+      "first_token_ms": 1753,
+      "total_ms": 2597,
       "tokens": 45,
-      "tokens_per_second": 51.1
+      "tokens_per_second": 53.3
     },
     {
       "id": "p14",
@@ -722,13 +727,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1721,
-      "total_ms": 2483,
+      "first_token_ms": 1756,
+      "total_ms": 2450,
       "tokens": 37,
-      "tokens_per_second": 48.5
+      "tokens_per_second": 53.4
     },
     {
       "id": "p15",
@@ -740,13 +745,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1747,
-      "total_ms": 2302,
+      "first_token_ms": 1667,
+      "total_ms": 2190,
       "tokens": 28,
-      "tokens_per_second": 50.5
+      "tokens_per_second": 53.5
     },
     {
       "id": "p16",
@@ -758,13 +763,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 2139,
-      "total_ms": 2762,
+      "first_token_ms": 2094,
+      "total_ms": 2713,
       "tokens": 33,
-      "tokens_per_second": 53.0
+      "tokens_per_second": 53.4
     },
     {
       "id": "p17",
@@ -776,13 +781,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1880,
-      "total_ms": 2262,
+      "first_token_ms": 1836,
+      "total_ms": 2189,
       "tokens": 19,
-      "tokens_per_second": 49.7
+      "tokens_per_second": 53.8
     },
     {
       "id": "p18",
@@ -794,13 +799,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1839,
-      "total_ms": 2285,
+      "first_token_ms": 1751,
+      "total_ms": 2141,
       "tokens": 21,
-      "tokens_per_second": 47.0
+      "tokens_per_second": 53.8
     },
     {
       "id": "p19",
@@ -812,13 +817,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1717,
-      "total_ms": 2495,
+      "first_token_ms": 1667,
+      "total_ms": 2432,
       "tokens": 41,
-      "tokens_per_second": 52.7
+      "tokens_per_second": 53.6
     },
     {
       "id": "p20",
@@ -830,13 +835,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1634,
-      "total_ms": 2126,
+      "first_token_ms": 1667,
+      "total_ms": 2133,
       "tokens": 25,
-      "tokens_per_second": 50.9
+      "tokens_per_second": 53.6
     },
     {
       "id": "p21",
@@ -848,13 +853,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1974,
-      "total_ms": 4495,
+      "first_token_ms": 2008,
+      "total_ms": 4417,
       "tokens": 128,
-      "tokens_per_second": 50.8
+      "tokens_per_second": 53.1
     },
     {
       "id": "p22",
@@ -866,13 +871,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1625,
-      "total_ms": 2425,
+      "first_token_ms": 1671,
+      "total_ms": 2457,
       "tokens": 42,
-      "tokens_per_second": 52.5
+      "tokens_per_second": 53.4
     },
     {
       "id": "p23",
@@ -884,13 +889,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1527,
-      "total_ms": 2098,
+      "first_token_ms": 1584,
+      "total_ms": 2126,
       "tokens": 29,
-      "tokens_per_second": 50.8
+      "tokens_per_second": 53.6
     },
     {
       "id": "p24",
@@ -902,13 +907,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
+      "refusal": false,
+      "supported": true,
       "unsupported_claims": [],
-      "first_token_ms": 1954,
-      "total_ms": 2562,
+      "first_token_ms": 2008,
+      "total_ms": 2609,
       "tokens": 32,
-      "tokens_per_second": 52.6
+      "tokens_per_second": 53.3
     },
     {
       "id": "u01",
@@ -918,13 +923,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 2111,
-      "total_ms": 2506,
+      "first_token_ms": 2177,
+      "total_ms": 2570,
       "tokens": 21,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.4
     },
     {
       "id": "u02",
@@ -934,13 +939,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1956,
-      "total_ms": 2701,
+      "first_token_ms": 2008,
+      "total_ms": 2697,
       "tokens": 37,
-      "tokens_per_second": 49.7
+      "tokens_per_second": 53.7
     },
     {
       "id": "u03",
@@ -950,13 +955,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1946,
-      "total_ms": 2399,
+      "first_token_ms": 2005,
+      "total_ms": 2453,
       "tokens": 24,
-      "tokens_per_second": 53.0
+      "tokens_per_second": 53.5
     },
     {
       "id": "u04",
@@ -966,13 +971,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 2037,
-      "total_ms": 2527,
+      "first_token_ms": 2093,
+      "total_ms": 2580,
       "tokens": 26,
-      "tokens_per_second": 53.0
+      "tokens_per_second": 53.3
     },
     {
       "id": "u05",
@@ -984,13 +989,15 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
-      "unsupported_claims": [],
-      "first_token_ms": 1854,
-      "total_ms": 3606,
+      "refusal": false,
+      "supported": false,
+      "unsupported_claims": [
+        "Ainsi, il est possible de télétravailler depuis l'étranger, à condition de respecter les règles de sécurité."
+      ],
+      "first_token_ms": 1920,
+      "total_ms": 3652,
       "tokens": 92,
-      "tokens_per_second": 52.5
+      "tokens_per_second": 53.1
     },
     {
       "id": "u06",
@@ -1000,13 +1007,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1941,
-      "total_ms": 2450,
+      "first_token_ms": 2004,
+      "total_ms": 2508,
       "tokens": 27,
-      "tokens_per_second": 53.1
+      "tokens_per_second": 53.6
     },
     {
       "id": "u07",
@@ -1016,29 +1023,29 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1637,
-      "total_ms": 2506,
+      "first_token_ms": 1674,
+      "total_ms": 2536,
       "tokens": 46,
-      "tokens_per_second": 52.9
+      "tokens_per_second": 53.4
     },
     {
       "id": "u08",
       "category": "unanswerable",
       "question": "Pendant combien de temps les e-mails supprimés sont-ils conservés ?",
-      "answer": "Les e-mails supprimés ne sont pas mentionnés dans les extraits fournis, donc il n'est pas possible de répondre à cette question à partir des informations disponibles.",
+      "answer": "Les excerpts fournis ne mentionnent pas la durée de conservation des e-mails supprimés. Ainsi, il n'est pas possible de répondre à cette question à partir des informations disponibles.",
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1902,
-      "total_ms": 2632,
-      "tokens": 38,
-      "tokens_per_second": 52.0
+      "first_token_ms": 1837,
+      "total_ms": 2606,
+      "tokens": 41,
+      "tokens_per_second": 53.3
     },
     {
       "id": "u09",
@@ -1048,13 +1055,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1188,
-      "total_ms": 1691,
+      "first_token_ms": 1251,
+      "total_ms": 1751,
       "tokens": 27,
-      "tokens_per_second": 53.7
+      "tokens_per_second": 54.0
     },
     {
       "id": "u10",
@@ -1064,13 +1071,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1774,
-      "total_ms": 2224,
+      "first_token_ms": 1843,
+      "total_ms": 2291,
       "tokens": 24,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.6
     },
     {
       "id": "u11",
@@ -1080,13 +1087,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1640,
-      "total_ms": 2048,
+      "first_token_ms": 1671,
+      "total_ms": 2061,
       "tokens": 21,
-      "tokens_per_second": 51.5
+      "tokens_per_second": 53.8
     },
     {
       "id": "u12",
@@ -1096,13 +1103,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1465,
-      "total_ms": 1993,
+      "first_token_ms": 1505,
+      "total_ms": 2005,
       "tokens": 27,
-      "tokens_per_second": 51.2
+      "tokens_per_second": 54.1
     },
     {
       "id": "u13",
@@ -1114,13 +1121,13 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1723,
-      "total_ms": 3795,
+      "first_token_ms": 1759,
+      "total_ms": 3821,
       "tokens": 109,
-      "tokens_per_second": 52.6
+      "tokens_per_second": 52.9
     },
     {
       "id": "u14",
@@ -1130,13 +1137,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1525,
-      "total_ms": 2016,
+      "first_token_ms": 1584,
+      "total_ms": 2069,
       "tokens": 26,
-      "tokens_per_second": 52.9
+      "tokens_per_second": 53.6
     },
     {
       "id": "u15",
@@ -1146,13 +1153,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1694,
-      "total_ms": 2206,
+      "first_token_ms": 1758,
+      "total_ms": 2262,
       "tokens": 27,
-      "tokens_per_second": 52.7
+      "tokens_per_second": 53.6
     },
     {
       "id": "u16",
@@ -1162,13 +1169,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1798,
-      "total_ms": 2746,
+      "first_token_ms": 1837,
+      "total_ms": 2739,
       "tokens": 48,
-      "tokens_per_second": 50.6
+      "tokens_per_second": 53.2
     },
     {
       "id": "u17",
@@ -1178,13 +1185,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1693,
-      "total_ms": 2132,
+      "first_token_ms": 1756,
+      "total_ms": 2181,
       "tokens": 23,
-      "tokens_per_second": 52.4
+      "tokens_per_second": 54.1
     },
     {
       "id": "u18",
@@ -1194,13 +1201,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 2000,
-      "total_ms": 2672,
+      "first_token_ms": 2009,
+      "total_ms": 2661,
       "tokens": 35,
-      "tokens_per_second": 52.1
+      "tokens_per_second": 53.7
     },
     {
       "id": "u19",
@@ -1210,13 +1217,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1717,
-      "total_ms": 2263,
+      "first_token_ms": 1752,
+      "total_ms": 2293,
       "tokens": 29,
-      "tokens_per_second": 53.1
+      "tokens_per_second": 53.7
     },
     {
       "id": "u20",
@@ -1226,13 +1233,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1960,
-      "total_ms": 2515,
+      "first_token_ms": 2011,
+      "total_ms": 2552,
       "tokens": 29,
-      "tokens_per_second": 52.2
+      "tokens_per_second": 53.5
     },
     {
       "id": "u21",
@@ -1242,13 +1249,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1632,
-      "total_ms": 2162,
+      "first_token_ms": 1666,
+      "total_ms": 2190,
       "tokens": 28,
-      "tokens_per_second": 52.9
+      "tokens_per_second": 53.5
     },
     {
       "id": "u22",
@@ -1258,13 +1265,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 2069,
-      "total_ms": 2634,
+      "first_token_ms": 2093,
+      "total_ms": 2618,
       "tokens": 28,
-      "tokens_per_second": 49.5
+      "tokens_per_second": 53.3
     },
     {
       "id": "u23",
@@ -1276,13 +1283,15 @@
       ],
       "facts_correct": true,
       "citation_valid": true,
-      "refusal": null,
-      "supported": null,
-      "unsupported_claims": [],
-      "first_token_ms": 1748,
-      "total_ms": 2255,
+      "refusal": false,
+      "supported": false,
+      "unsupported_claims": [
+        "Le prestataire d'hébergement pour la copie de sauvegarde hors site est OVHcloud [2]. (L'excerpt [2] indique qu'OVHcloud héberge les données de production Helios, mais ne précise pas qui héberge la copie de sauvegarde hors site)"
+      ],
+      "first_token_ms": 1754,
+      "total_ms": 2258,
       "tokens": 27,
-      "tokens_per_second": 53.3
+      "tokens_per_second": 53.5
     },
     {
       "id": "u24",
@@ -1292,13 +1301,13 @@
       "citations": [],
       "facts_correct": true,
       "citation_valid": false,
-      "refusal": null,
+      "refusal": true,
       "supported": null,
       "unsupported_claims": [],
-      "first_token_ms": 1640,
-      "total_ms": 2052,
+      "first_token_ms": 1678,
+      "total_ms": 2088,
       "tokens": 22,
-      "tokens_per_second": 53.4
+      "tokens_per_second": 53.7
     }
   ]
 }
