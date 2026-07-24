@@ -1,0 +1,1304 @@
+{
+  "questions": 72,
+  "config": {
+    "generation_model": "mlx-community/Qwen3-8B-4bit",
+    "decoding": "greedy",
+    "top_k": 5,
+    "judge_model": null,
+    "judge_prompt_version": null
+  },
+  "categories": {
+    "direct": {
+      "n": 24,
+      "judged": 0,
+      "facts_rate": 0.958,
+      "citation_valid_rate": 1.0,
+      "refusal_rate": null,
+      "supported_rate": null,
+      "median_tokens": 30.0,
+      "median_first_token_ms": 1642.5,
+      "mean_tokens_per_second": 53.4
+    },
+    "paraphrase": {
+      "n": 24,
+      "judged": 0,
+      "facts_rate": 0.917,
+      "citation_valid_rate": 1.0,
+      "refusal_rate": null,
+      "supported_rate": null,
+      "median_tokens": 32.5,
+      "median_first_token_ms": 1848.5,
+      "mean_tokens_per_second": 51.7
+    },
+    "unanswerable": {
+      "n": 24,
+      "judged": 0,
+      "facts_rate": null,
+      "citation_valid_rate": null,
+      "refusal_rate": null,
+      "supported_rate": null,
+      "median_tokens": 27.0,
+      "median_first_token_ms": 1761.0,
+      "mean_tokens_per_second": 52.4
+    }
+  },
+  "answers": [
+    {
+      "id": "d01",
+      "category": "direct",
+      "question": "Combien de jours de congés payés par an ?",
+      "answer": "Chaque collaborateur acquiert 25 jours ouvres de conges payes par an [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2648,
+      "total_ms": 3098,
+      "tokens": 24,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "d02",
+      "category": "direct",
+      "question": "Quelle est l'indemnité de télétravail ?",
+      "answer": "L'indemnité de télétravail est de 2,60 EUR par jour, plafonnée à 55 EUR par mois [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2033,
+      "total_ms": 2713,
+      "tokens": 36,
+      "tokens_per_second": 52.9
+    },
+    {
+      "id": "d03",
+      "category": "direct",
+      "question": "Quel est le budget formation annuel par collaborateur ?",
+      "answer": "Le budget formation annuel par collaborateur est de 1 800 EUR, hors CPF [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2031,
+      "total_ms": 2485,
+      "tokens": 24,
+      "tokens_per_second": 52.9
+    },
+    {
+      "id": "d04",
+      "category": "direct",
+      "question": "Pendant combien de temps le salaire est-il maintenu en cas d'arrêt maladie ?",
+      "answer": "Le salaire est maintenu à 100% pendant 90 jours en cas d'arrêt maladie pour les salariés ayant plus d'un an d'ancienneté [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1777,
+      "total_ms": 2629,
+      "tokens": 45,
+      "tokens_per_second": 52.8
+    },
+    {
+      "id": "d05",
+      "category": "direct",
+      "question": "Quelle est la longueur minimale d'un mot de passe ?",
+      "answer": "La longueur minimale d'un mot de passe est de 16 caractères [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1863,
+      "total_ms": 2257,
+      "tokens": 21,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "d06",
+      "category": "direct",
+      "question": "Quels facteurs d'authentification multifacteur sont autorisés ?",
+      "answer": "Les facteurs d'authentification multifacteur autorisés sont les applications TOTP et les clés FIDO2 [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1779,
+      "total_ms": 2345,
+      "tokens": 30,
+      "tokens_per_second": 53.0
+    },
+    {
+      "id": "d07",
+      "category": "direct",
+      "question": "Que faire si mon ordinateur est compromis ?",
+      "answer": "Si votre ordinateur est compromis, ne le déconnectez pas du réseau et ne le mettez pas hors ligne. Attendez les instructions de l'équipe de sécurité. Conservez les preuves (mails, captures) [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": false,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1947,
+      "total_ms": 2980,
+      "tokens": 55,
+      "tokens_per_second": 53.2
+    },
+    {
+      "id": "d08",
+      "category": "direct",
+      "question": "Quelle règle de sauvegarde l'entreprise applique-t-elle ?",
+      "answer": "L'entreprise applique la règle 3-2-1 pour la sauvegarde des données, qui implique trois copies, deux supports et une copie hors site [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1679,
+      "total_ms": 2426,
+      "tokens": 40,
+      "tokens_per_second": 53.6
+    },
+    {
+      "id": "d09",
+      "category": "direct",
+      "question": "Quel matériel informatique puis-je choisir en arrivant ?",
+      "answer": "Vous pouvez choisir entre un MacBook Pro 14 pouces ou un Dell XPS 13 sous Ubuntu [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1773,
+      "total_ms": 2256,
+      "tokens": 26,
+      "tokens_per_second": 53.9
+    },
+    {
+      "id": "d10",
+      "category": "direct",
+      "question": "Combien de temps dure la période d'essai des cadres ?",
+      "answer": "La période d'essai des cadres dure 4 mois [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1775,
+      "total_ms": 2109,
+      "tokens": 18,
+      "tokens_per_second": 53.9
+    },
+    {
+      "id": "d11",
+      "category": "direct",
+      "question": "Comment fonctionne le parrainage des nouveaux arrivants ?",
+      "answer": "Chaque nouvel arrivant est attribué un parrain ou une marraine hors de son équipe directe. Ce parrain accompagne le nouvel arrivant pendant un point hebdomadaire de 30 minutes durant les deux premiers mois. Il répond aux questions du quotidien et facilite la découverte des autres équipes [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1523,
+      "total_ms": 3003,
+      "tokens": 79,
+      "tokens_per_second": 53.4
+    },
+    {
+      "id": "d12",
+      "category": "direct",
+      "question": "Qui contacter pour un problème informatique ?",
+      "answer": "Pour un problème informatique, il faut contacter it-support@solencia.fr [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1763,
+      "total_ms": 2134,
+      "tokens": 20,
+      "tokens_per_second": 53.8
+    },
+    {
+      "id": "d13",
+      "category": "direct",
+      "question": "Quel est le plafond de remboursement d'un repas avec un client ?",
+      "answer": "Le plafond de remboursement d'un repas avec un client est de 38 EUR par personne [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1606,
+      "total_ms": 2127,
+      "tokens": 28,
+      "tokens_per_second": 53.7
+    },
+    {
+      "id": "d14",
+      "category": "direct",
+      "question": "Sous quel délai dois-je soumettre une note de frais ?",
+      "answer": "Vous devez soumettre une note de frais sous 30 jours calendaires après la dépense [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1435,
+      "total_ms": 1883,
+      "tokens": 24,
+      "tokens_per_second": 53.6
+    },
+    {
+      "id": "d15",
+      "category": "direct",
+      "question": "Quelle est l'indemnité kilométrique pour un véhicule personnel ?",
+      "answer": "L'indemnité kilométrique pour un véhicule personnel est de 0,52 EUR par kilomètre [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1437,
+      "total_ms": 1997,
+      "tokens": 30,
+      "tokens_per_second": 53.5
+    },
+    {
+      "id": "d16",
+      "category": "direct",
+      "question": "Dans quels cas puis-je demander une avance sur frais ?",
+      "answer": "Vous pouvez demander une avance sur frais lorsque les frais previsionnels depassent 400 EUR, au moins 10 jours avant le deplacement [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1438,
+      "total_ms": 2151,
+      "tokens": 38,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "d17",
+      "category": "direct",
+      "question": "Quel est le SLA de disponibilité de la plateforme Helios ?",
+      "answer": "Le SLA de disponibilité de la plateforme Helios est de 99,5% de disponibilité mensuelle, hors fenêtre de maintenance planifiée le mardi de 22h00 à minuit [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1517,
+      "total_ms": 2512,
+      "tokens": 53,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "d18",
+      "category": "direct",
+      "question": "À partir de quelle température d'onduleur une alerte critique est-elle déclenchée ?",
+      "answer": "Une alerte critique est déclenchée lorsque la température de l'onduleur dépasse 80 degrés C [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1590,
+      "total_ms": 2188,
+      "tokens": 32,
+      "tokens_per_second": 53.5
+    },
+    {
+      "id": "d19",
+      "category": "direct",
+      "question": "Quel est le quota de requêtes de l'API Helios ?",
+      "answer": "Le quota de requêtes de l'API Helios est de 600 requêtes par minute et par client [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1583,
+      "total_ms": 2105,
+      "tokens": 28,
+      "tokens_per_second": 53.6
+    },
+    {
+      "id": "d20",
+      "category": "direct",
+      "question": "Combien de temps une passerelle Edge peut-elle fonctionner sans connexion ?",
+      "answer": "Une passerelle Edge peut fonctionner sans connexion pendant 72 heures grâce à son buffer local [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1692,
+      "total_ms": 2121,
+      "tokens": 23,
+      "tokens_per_second": 53.6
+    },
+    {
+      "id": "d21",
+      "category": "direct",
+      "question": "Où sont hébergées les données de la plateforme Helios ?",
+      "answer": "Les données de la plateforme Helios sont hébergées par OVHcloud à Gravelines, dans la région eu-west-sbg [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1596,
+      "total_ms": 2194,
+      "tokens": 32,
+      "tokens_per_second": 53.5
+    },
+    {
+      "id": "d22",
+      "category": "direct",
+      "question": "Quels sont les seuils de validation pour un achat ?",
+      "answer": "Les seuils de validation pour un achat sont les suivants :  \n- Moins de 500 EUR HT : validation du manager [1].  \n- De 500 à 5 000 EUR HT : validation de la direction de BU [1].  \n- Au-delà de 5 000 EUR HT : validation DAF avec mise en concurrence de 3 devis [1].  \n- Au-delà de 25 000 EUR HT : le comité d'engagement se prononce [1].",
+      "citations": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1511,
+      "total_ms": 3734,
+      "tokens": 118,
+      "tokens_per_second": 53.1
+    },
+    {
+      "id": "d23",
+      "category": "direct",
+      "question": "Quels documents faut-il pour référencer un nouveau fournisseur ?",
+      "answer": "Pour référencer un nouveau fournisseur, il faut le KBIS, le RIB et l'attestation URSSAF de moins de 6 mois [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1602,
+      "total_ms": 2276,
+      "tokens": 36,
+      "tokens_per_second": 53.4
+    },
+    {
+      "id": "d24",
+      "category": "direct",
+      "question": "Quel est le délai de paiement des factures fournisseurs ?",
+      "answer": "Le délai de paiement des factures fournisseurs est de 30 jours fin de mois [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1518,
+      "total_ms": 1963,
+      "tokens": 24,
+      "tokens_per_second": 53.9
+    },
+    {
+      "id": "p01",
+      "category": "paraphrase",
+      "question": "Je pars deux jours à Lyon voir un client, je peux mettre combien par nuit d'hôtel ?",
+      "answer": "Vous pouvez mettre 130 EUR par nuit d'hôtel pour votre déplacement à Lyon, car Lyon est considéré comme une \"province\" selon les plafonds de remboursement [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1953,
+      "total_ms": 2781,
+      "tokens": 44,
+      "tokens_per_second": 53.1
+    },
+    {
+      "id": "p02",
+      "category": "paraphrase",
+      "question": "On me propose de bosser de chez moi, c'est limité à combien de jours par semaine ?",
+      "answer": "Le télétravail est limité à 3 jours par semaine [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2046,
+      "total_ms": 2372,
+      "tokens": 17,
+      "tokens_per_second": 52.2
+    },
+    {
+      "id": "p03",
+      "category": "paraphrase",
+      "question": "Mon PV de stationnement pris pendant une mission client est-il remboursé ?",
+      "answer": "Votre PV de stationnement pris pendant une mission client est remboursé, à condition qu'il soit accompagné d'un justificatif et qu'il soit inférieur à 5 EUR. Si le PV excède 5 EUR, il n'est pas remboursable [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": false,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1783,
+      "total_ms": 2925,
+      "tokens": 61,
+      "tokens_per_second": 53.4
+    },
+    {
+      "id": "p04",
+      "category": "paraphrase",
+      "question": "Qui paie quoi sur les titres-restaurant ?",
+      "answer": "L'employeur paie 60% des titres-restaurant, tandis que le salarié paie le reste. [1]",
+      "citations": [
+        1
+      ],
+      "facts_correct": false,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1979,
+      "total_ms": 2545,
+      "tokens": 30,
+      "tokens_per_second": 53.1
+    },
+    {
+      "id": "p05",
+      "category": "paraphrase",
+      "question": "Je suis malade ce matin, qu'est-ce que je fais concrètement ?",
+      "answer": "En cas d'absence imprevue, vous devez previer votre manager avant 9h30 et transmettre votre arret de travail sous 48 heures a rh@solencia.fr [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2040,
+      "total_ms": 2902,
+      "tokens": 46,
+      "tokens_per_second": 53.4
+    },
+    {
+      "id": "p06",
+      "category": "paraphrase",
+      "question": "Au bout de combien de temps d'inactivité ma session se verrouille-t-elle toute seule ?",
+      "answer": "Votre session se verrouille automatiquement après 5 minutes d'inactivité [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1621,
+      "total_ms": 1975,
+      "tokens": 19,
+      "tokens_per_second": 53.7
+    },
+    {
+      "id": "p07",
+      "category": "paraphrase",
+      "question": "Sur quels services suis-je obligé d'activer la double authentification ?",
+      "answer": "Vous êtes obligé d'activer la double authentification (MFA) sur Google Workspace, GitLab, le VPN et Payfit [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1784,
+      "total_ms": 2410,
+      "tokens": 33,
+      "tokens_per_second": 52.8
+    },
+    {
+      "id": "p08",
+      "category": "paraphrase",
+      "question": "Les consultants externes doivent-ils appliquer notre politique de sécurité ?",
+      "answer": "Les consultants externes doivent appliquer la politique de sécurité de Solencia. La politique de sécurité s'applique aux collaborateurs, prestataires et stagiaires qui accèdent au système d'information de Solencia, quel que soit le matériel utilisé [2].",
+      "citations": [
+        2
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1948,
+      "total_ms": 3008,
+      "tokens": 56,
+      "tokens_per_second": 52.8
+    },
+    {
+      "id": "p09",
+      "category": "paraphrase",
+      "question": "À quelle heure et par qui suis-je accueilli pour mon tout premier jour ?",
+      "answer": "Vous êtes accueilli à 9h15 par l'office manager [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1622,
+      "total_ms": 2003,
+      "tokens": 20,
+      "tokens_per_second": 52.5
+    },
+    {
+      "id": "p10",
+      "category": "paraphrase",
+      "question": "Qui m'aide à découvrir la boîte en dehors de ma propre équipe ?",
+      "answer": "Votre parrain ou marraine, qui est hors de votre équipe directe, vous aide à découvrir la boîte en dehors de votre propre équipe [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1975,
+      "total_ms": 2737,
+      "tokens": 40,
+      "tokens_per_second": 52.5
+    },
+    {
+      "id": "p11",
+      "category": "paraphrase",
+      "question": "J'ai combien de temps pour terminer le module de formation sécurité en ligne ?",
+      "answer": "Vous avez 15 jours pour terminer le module de formation sécurité en ligne [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1987,
+      "total_ms": 2359,
+      "tokens": 20,
+      "tokens_per_second": 53.7
+    },
+    {
+      "id": "p12",
+      "category": "paraphrase",
+      "question": "Quand mes objectifs de période d'essai sont-ils fixés avec mon manager ?",
+      "answer": "Les objectifs de la période d'essai sont fixés avec le manager à J+30 [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1693,
+      "total_ms": 2208,
+      "tokens": 25,
+      "tokens_per_second": 48.6
+    },
+    {
+      "id": "p13",
+      "category": "paraphrase",
+      "question": "Qu'est-ce qu'il me faut avant de prendre ma voiture perso pour une mission ?",
+      "answer": "Avant de prendre votre voiture perso pour une mission, vous devez obtenir l'autorisation préalable de votre manager et vous assurer que les déplacements professionnels sont couverts par une assurance [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1858,
+      "total_ms": 2738,
+      "tokens": 45,
+      "tokens_per_second": 51.1
+    },
+    {
+      "id": "p14",
+      "category": "paraphrase",
+      "question": "L'hôtel ne comprend pas le petit-déjeuner, je peux me faire rembourser combien ?",
+      "answer": "Si l'hôtel ne comprend pas le petit-déjeuner, vous pouvez vous faire rembourser 12 EUR pour le petit-déjeuner seul [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1721,
+      "total_ms": 2483,
+      "tokens": 37,
+      "tokens_per_second": 48.5
+    },
+    {
+      "id": "p15",
+      "category": "paraphrase",
+      "question": "À partir de quand ai-je le droit de prendre l'avion plutôt que le train ?",
+      "answer": "Vous avez le droit de prendre l'avion plutôt que le train si le trajet en train depasse 5 heures [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1747,
+      "total_ms": 2302,
+      "tokens": 28,
+      "tokens_per_second": 50.5
+    },
+    {
+      "id": "p16",
+      "category": "paraphrase",
+      "question": "En tant que commercial, combien puis-je dépenser par mois avec la carte de l'entreprise ?",
+      "answer": "En tant que commercial, vous pouvez dépenser jusqu'à 2 500 EUR par mois avec la carte affaires de l'entreprise [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2139,
+      "total_ms": 2762,
+      "tokens": 33,
+      "tokens_per_second": 53.0
+    },
+    {
+      "id": "p17",
+      "category": "paraphrase",
+      "question": "Un site ne remonte plus de données, au bout de combien de temps l'alerte part-elle ?",
+      "answer": "L'alerte part après 30 minutes de perte de communication [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1880,
+      "total_ms": 2262,
+      "tokens": 19,
+      "tokens_per_second": 49.7
+    },
+    {
+      "id": "p18",
+      "category": "paraphrase",
+      "question": "Pendant combien de temps les mesures brutes des capteurs sont-elles conservées ?",
+      "answer": "Les mesures brutes des capteurs sont conservées pendant 13 mois [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1839,
+      "total_ms": 2285,
+      "tokens": 21,
+      "tokens_per_second": 47.0
+    },
+    {
+      "id": "p19",
+      "category": "paraphrase",
+      "question": "Pourquoi la plateforme serait-elle indisponible un mardi soir ?",
+      "answer": "La plateforme pourrait être indisponible un mardi soir pendant la fenêtre de maintenance planifiée, qui a lieu le mardi de 22h00 à minuit [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1717,
+      "total_ms": 2495,
+      "tokens": 41,
+      "tokens_per_second": 52.7
+    },
+    {
+      "id": "p20",
+      "category": "paraphrase",
+      "question": "Comment mon script s'authentifie-t-il auprès de l'API Helios ?",
+      "answer": "Votre script s'authentifie auprès de l'API Helios en utilisant OAuth2 client credentials [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1634,
+      "total_ms": 2126,
+      "tokens": 25,
+      "tokens_per_second": 50.9
+    },
+    {
+      "id": "p21",
+      "category": "paraphrase",
+      "question": "Pour un achat de 12 000 euros HT, qui valide et avec quelles conditions ?",
+      "answer": "Pour un achat de 12 000 euros HT, la validation est effectuée par le DAF avec mise en concurrence de 3 devis [1]. Au-delà de 5 000 EUR HT, la validation DAF avec mise en concurrence de 3 devis est requise. De plus, au-delà de 25 000 EUR HT, le comité d'engagement se prononce, mais ce seuil n'est pas atteint ici. Ainsi, la validation est effectuée par le DAF avec concurrence de 3 devis.",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1974,
+      "total_ms": 4495,
+      "tokens": 128,
+      "tokens_per_second": 50.8
+    },
+    {
+      "id": "p22",
+      "category": "paraphrase",
+      "question": "On a besoin d'un prestataire en urgence opérationnelle, ça peut aller vite comment ?",
+      "answer": "En cas d'urgence opérationnelle, une procédure accélérée permet un accord DAF sous 24 heures, avec régularisation documentaire sous 5 jours [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1625,
+      "total_ms": 2425,
+      "tokens": 42,
+      "tokens_per_second": 52.5
+    },
+    {
+      "id": "p23",
+      "category": "paraphrase",
+      "question": "La facture du fournisseur ne correspond pas au devis, je fais quoi et sous quel délai ?",
+      "answer": "En cas de litige de facturation, vous devez le signaler à la comptabilité sous 5 jours ouvres [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1527,
+      "total_ms": 2098,
+      "tokens": 29,
+      "tokens_per_second": 50.8
+    },
+    {
+      "id": "p24",
+      "category": "paraphrase",
+      "question": "On est combien chez Solencia et où sont les bureaux ?",
+      "answer": "Solencia compte 214 collaborateurs répartis entre le siège de Nantes et les agences de Lyon et Toulouse [1].",
+      "citations": [
+        1
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1954,
+      "total_ms": 2562,
+      "tokens": 32,
+      "tokens_per_second": 52.6
+    },
+    {
+      "id": "u01",
+      "category": "unanswerable",
+      "question": "Quel est le montant de la prime de cooptation ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le montant de la prime de cooptation.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2111,
+      "total_ms": 2506,
+      "tokens": 21,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "u02",
+      "category": "unanswerable",
+      "question": "Combien de places de parking le siège de Nantes offre-t-il ?",
+      "answer": "La question ne peut être répondue à partir des informations fournies. Aucun des extraits ne mentionne le nombre de places de parking au siège de Nantes.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1956,
+      "total_ms": 2701,
+      "tokens": 37,
+      "tokens_per_second": 49.7
+    },
+    {
+      "id": "u03",
+      "category": "unanswerable",
+      "question": "Quelle est la politique de congé parental de Solencia ?",
+      "answer": "Les excerpts fournis ne contiennent pas d'information sur la politique de congé parental de Solencia.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1946,
+      "total_ms": 2399,
+      "tokens": 24,
+      "tokens_per_second": 53.0
+    },
+    {
+      "id": "u04",
+      "category": "unanswerable",
+      "question": "Quel est le salaire d'entrée d'un ingénieur support chez Solencia ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le salaire d'entrée d'un ingénieur support chez Solencia.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2037,
+      "total_ms": 2527,
+      "tokens": 26,
+      "tokens_per_second": 53.0
+    },
+    {
+      "id": "u05",
+      "category": "unanswerable",
+      "question": "Ai-je le droit de télétravailler depuis l'étranger ?",
+      "answer": "La politique de Solencia ne mentionne pas explicitement s'il est possible de télétravailler depuis l'étranger. Cependant, l'accès aux ressources internes et aux données C2 ou supérieures depuis l'étranger nécessite l'utilisation du VPN WireGuard [2]. Ainsi, il est possible de télétravailler depuis l'étranger, à condition de respecter les règles de sécurité.",
+      "citations": [
+        2
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1854,
+      "total_ms": 3606,
+      "tokens": 92,
+      "tokens_per_second": 52.5
+    },
+    {
+      "id": "u06",
+      "category": "unanswerable",
+      "question": "Quelle est la marque des écrans externes fournis avec les postes de travail ?",
+      "answer": "Les excerpts fournis ne mentionnent pas la marque des écrans externes fournis avec les postes de travail.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1941,
+      "total_ms": 2450,
+      "tokens": 27,
+      "tokens_per_second": 53.1
+    },
+    {
+      "id": "u07",
+      "category": "unanswerable",
+      "question": "Combien coûte une licence Helios pour un site de 10 MW ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le coût d'une licence Helios pour un site de 10 MW. Ainsi, il n'est pas possible de répondre à cette question à partir des informations disponibles.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1637,
+      "total_ms": 2506,
+      "tokens": 46,
+      "tokens_per_second": 52.9
+    },
+    {
+      "id": "u08",
+      "category": "unanswerable",
+      "question": "Pendant combien de temps les e-mails supprimés sont-ils conservés ?",
+      "answer": "Les e-mails supprimés ne sont pas mentionnés dans les extraits fournis, donc il n'est pas possible de répondre à cette question à partir des informations disponibles.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1902,
+      "total_ms": 2632,
+      "tokens": 38,
+      "tokens_per_second": 52.0
+    },
+    {
+      "id": "u09",
+      "category": "unanswerable",
+      "question": "Qui est le délégué à la protection des données (DPO) de Solencia ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le délégué à la protection des données (DPO) de Solencia.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1188,
+      "total_ms": 1691,
+      "tokens": 27,
+      "tokens_per_second": 53.7
+    },
+    {
+      "id": "u10",
+      "category": "unanswerable",
+      "question": "Quel taux d'intéressement a été versé l'an dernier ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le taux d'intéressement versé l'an dernier.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1774,
+      "total_ms": 2224,
+      "tokens": 24,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "u11",
+      "category": "unanswerable",
+      "question": "Combien de jours de congés sont accordés pour un mariage ?",
+      "answer": "Les excerpts ne mentionnent pas le nombre de jours de congés accordés pour un mariage.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1640,
+      "total_ms": 2048,
+      "tokens": 21,
+      "tokens_per_second": 51.5
+    },
+    {
+      "id": "u12",
+      "category": "unanswerable",
+      "question": "Quelle version minimale d'Android faut-il pour l'application mobile Helios ?",
+      "answer": "Les excerpts fournis ne mentionnent pas la version minimale d'Android requise pour l'application mobile Helios.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1465,
+      "total_ms": 1993,
+      "tokens": 27,
+      "tokens_per_second": 51.2
+    },
+    {
+      "id": "u13",
+      "category": "unanswerable",
+      "question": "Quel est le plafond de remboursement d'un taxi en déplacement ?",
+      "answer": "Le plafond de remboursement d'un taxi en déplacement n'est pas spécifiquement mentionné dans les excerpts fournis. Cependant, il est possible que le plafond soit couvert par l'indemnité kilométrique interne de 0,52 EUR par kilomètre, qui inclut les péages et parkings remboursés sur justificatif [2]. Cependant, cela ne constitue pas un plafond explicite pour un taxi.",
+      "citations": [
+        2
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1723,
+      "total_ms": 3795,
+      "tokens": 109,
+      "tokens_per_second": 52.6
+    },
+    {
+      "id": "u14",
+      "category": "unanswerable",
+      "question": "Comment obtenir une place en crèche d'entreprise ?",
+      "answer": "Aucune des excerpts ne mentionne la procédure pour obtenir une place en crèche d'entreprise.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1525,
+      "total_ms": 2016,
+      "tokens": 26,
+      "tokens_per_second": 52.9
+    },
+    {
+      "id": "u15",
+      "category": "unanswerable",
+      "question": "Quelle est la politique d'impression et de destruction des documents papier ?",
+      "answer": "Les excerpts fournis ne contiennent pas d'information sur la politique d'impression et de destruction des documents papier.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1694,
+      "total_ms": 2206,
+      "tokens": 27,
+      "tokens_per_second": 52.7
+    },
+    {
+      "id": "u16",
+      "category": "unanswerable",
+      "question": "Combien d'onduleurs une passerelle Helios Edge peut-elle superviser au maximum ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le nombre maximum d'onduleurs qu'une passerelle Helios Edge peut superviser. Ainsi, il n'est pas possible de répondre à cette question à partir des informations disponibles.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1798,
+      "total_ms": 2746,
+      "tokens": 48,
+      "tokens_per_second": 50.6
+    },
+    {
+      "id": "u17",
+      "category": "unanswerable",
+      "question": "Quel est le préavis pour résilier un abonnement Helios ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le préavis pour résilier un abonnement Helios.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1693,
+      "total_ms": 2132,
+      "tokens": 23,
+      "tokens_per_second": 52.4
+    },
+    {
+      "id": "u18",
+      "category": "unanswerable",
+      "question": "Y a-t-il une salle de sport au siège de Nantes ?",
+      "answer": "Les excerpts fournis ne mentionnent pas la présence d'une salle de sport au siège de Nantes. Aucune information à ce sujet n'est disponible.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2000,
+      "total_ms": 2672,
+      "tokens": 35,
+      "tokens_per_second": 52.1
+    },
+    {
+      "id": "u19",
+      "category": "unanswerable",
+      "question": "Quelle est la politique de Solencia sur les cadeaux offerts aux clients ?",
+      "answer": "Les excerpts fournis ne contiennent pas d'information sur la politique de Solencia concernant les cadeaux offerts aux clients.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1717,
+      "total_ms": 2263,
+      "tokens": 29,
+      "tokens_per_second": 53.1
+    },
+    {
+      "id": "u20",
+      "category": "unanswerable",
+      "question": "Quel est le montant de la prime d'ancienneté après 5 ans ?",
+      "answer": "Le montant de la prime d'ancienneté après 5 ans n'est pas mentionné dans les excerpts fournis.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1960,
+      "total_ms": 2515,
+      "tokens": 29,
+      "tokens_per_second": 52.2
+    },
+    {
+      "id": "u21",
+      "category": "unanswerable",
+      "question": "Sous quel délai le support Helios répond-il à un ticket client de sévérité 1 ?",
+      "answer": "L'extrait ne mentionne pas le délai de réponse du support Helios à un ticket client de sévérité 1.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1632,
+      "total_ms": 2162,
+      "tokens": 28,
+      "tokens_per_second": 52.9
+    },
+    {
+      "id": "u22",
+      "category": "unanswerable",
+      "question": "Quels sont les horaires d'ouverture de l'agence de Lyon ?",
+      "answer": "Les horaires d'ouverture de l'agence de Lyon ne sont pas mentionnés dans les extraits fournis.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 2069,
+      "total_ms": 2634,
+      "tokens": 28,
+      "tokens_per_second": 49.5
+    },
+    {
+      "id": "u23",
+      "category": "unanswerable",
+      "question": "Quel prestataire héberge la copie de sauvegarde hors site ?",
+      "answer": "Le prestataire d'hébergement pour la copie de sauvegarde hors site est OVHcloud [2].",
+      "citations": [
+        2
+      ],
+      "facts_correct": true,
+      "citation_valid": true,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1748,
+      "total_ms": 2255,
+      "tokens": 27,
+      "tokens_per_second": 53.3
+    },
+    {
+      "id": "u24",
+      "category": "unanswerable",
+      "question": "Quel est le chiffre d'affaires annuel de Solencia ?",
+      "answer": "Les excerpts fournis ne mentionnent pas le chiffre d'affaires annuel de Solencia.",
+      "citations": [],
+      "facts_correct": true,
+      "citation_valid": false,
+      "refusal": null,
+      "supported": null,
+      "unsupported_claims": [],
+      "first_token_ms": 1640,
+      "total_ms": 2052,
+      "tokens": 22,
+      "tokens_per_second": 53.4
+    }
+  ]
+}

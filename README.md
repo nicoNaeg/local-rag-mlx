@@ -2,7 +2,7 @@
 
 > Fully local RAG engine with LoRA fine-tuning, built for Apple Silicon. Hybrid retrieval, cross-encoder reranking, token streaming. No cloud APIs at runtime.
 
-**Status: serving works end to end.** Ingestion, hybrid retrieval with reranking, and the streaming API with its frontend are in place; next come the generation evaluation harness and LoRA fine-tuning.
+**Status: evaluated end to end.** Ingestion, hybrid retrieval with reranking, streaming serving with its frontend, and the generation evaluation harness are in place; next is LoRA fine-tuning with its before and after table.
 
 ## Architecture
 
@@ -38,6 +38,22 @@ Retrieval is measured on a labeled set of 24 questions over the demo corpus (`ba
 
 Hybrid search alone already places a relevant chunk in the top 3 for every question; the reranker fixes the remaining rank-1 misses, which matters because only the top 3 to 5 chunks enter the prompt. These numbers are a ceiling: the corpus is clean and the questions direct. The generation evaluation (milestone 4) adds paraphrased and unanswerable questions that stress the pipeline harder.
 
+## Generation quality (baseline)
+
+`make eval-generation` runs the full pipeline (hybrid retrieval, reranking, prompt assembly, generation) on a labeled set of 72 questions (`backend/eval/generation.jsonl`): the 24 direct questions of the retrieval set enriched with expected facts, 24 colloquial paraphrases, and 24 unanswerable questions whose answer exists nowhere in the corpus, where the correct behavior is an explicit refusal. Decoding is greedy during evaluation so numbers are identical from run to run; production sampling is unchanged.
+
+Deterministic metrics are computed locally: expected facts present in the answer (after normalizing accents, currency and number formats), citation validity (every `[n]` marker points at a provided excerpt), concision and latency. Two semantic metrics are delegated to an LLM judge (`claude-opus-4-8`, strict structured output): refusal classification, and citation support, meaning every claim is backed by the excerpt it cites. Verdicts are cached in `backend/eval/results/judge_cache.jsonl` and committed, so a rerun with unchanged answers rebuilds the table without any API call. The judge is an evaluation tool only; the serving runtime stays fully local.
+
+Baseline of the base model (Qwen3-8B 4-bit, before fine-tuning):
+
+| metric | direct | paraphrase | unanswerable |
+|--------|--------|------------|--------------|
+| expected facts present | 0.958 | 0.917 | |
+| citation validity | 1.000 | 1.000 | |
+| median answer tokens | 30 | 33 | 27 |
+
+The judged metrics (refusal rate on the unanswerable set, per-claim citation support) complete this table once the judge pass runs; they are the primary targets of the milestone 5 before and after comparison. The three failures on answerable questions are instructive: one answer inverts a security instruction (keep the compromised machine connected, where the policy says the opposite), one invents a reimbursement rule by conflating two adjacent policies, one returns half of a two-part fact. All three carry well-formed citations, which is why citation validity alone is not a faithfulness metric and the fine-tuning targets grounding rather than formatting.
+
 ## Serving
 
 `make api` starts FastAPI on port 8000. `make front` starts the Next.js UI on http://localhost:3000 and proxies API calls to the backend, so the demo lives entirely at that address.
@@ -58,6 +74,7 @@ Requires [uv](https://docs.astral.sh/uv/), Docker, and Node 20+.
     make ingest      extract, chunk, embed and index the corpus
     make search q="votre question"   hybrid search + rerank over the index
     make eval-retrieval   measure retrieval quality on the labeled set
+    make eval-generation   measure generation quality (LLM judge needs ANTHROPIC_API_KEY)
     make api         start the API server (loads the models, port 8000)
     make front-install   install frontend dependencies
     make front       start the frontend on http://localhost:3000
